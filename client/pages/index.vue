@@ -1,7 +1,7 @@
 <template>
   <div class="mb-50">
     <section class="container mb-38">
-      <div class="grid grid-cols-2 mt-16">
+      <div class="grid lg:grid-cols-2 mt-16">
         <div>
           <span class="text-primary font-bold mb-6px">Digital Agency</span>
           <h1 class="text-[4rem] mb-[1.625rem] font-bold">Elanode</h1>
@@ -26,10 +26,14 @@
     </section>
 
     <section class="container mb-21">
-      <h2 class="header">A Creative Agency You<br />Can Trust</h2>
-      <div class="grid grid-cols-6">
-        <BaseLink link="/" text="Let's Talk" class="col-span-2" />
-        <p class="col-span-4">
+      <h2 class="header">
+        A Creative Agency You <br class="hidden sm:block" />Can Trust
+      </h2>
+      <div class="md:(grid grid-cols-6) items-start">
+        <div class="col-span-2">
+          <BaseLink link="/" text="Let's Talk" class="mt-3 md:mt-5" />
+        </div>
+        <p class="col-span-4 mt-5 md:mt-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo duis
           ut diam quam nulla porttitor massa id. Posuere morbi leo urna molestie
@@ -41,7 +45,7 @@
 
     <section class="container mb-21">
       <h2 class="header mb-11">Elanode Expertise</h2>
-      <div class="grid grid-cols-3 gap-10 min-h-53">
+      <div class="grid lg:grid-cols-3 gap-10 min-h-53">
         <HomeCard title="Reliable">
           <template #icon>
             <IconStar />
@@ -80,8 +84,11 @@
     </section>
 
     <section class="container">
-      <h2 class="header mb-13">Our Past Work</h2>
+      <h2 class="header mb-9">Our Past Work</h2>
+      <HomeCarousel />
     </section>
+
+    <div>test</div>
   </div>
 </template>
 
