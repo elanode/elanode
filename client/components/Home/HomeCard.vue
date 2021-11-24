@@ -8,7 +8,7 @@
     <h3 class="text-2xl font-bold mb-3">
       {{ title }}
     </h3>
-    <p class="leading-[1.15rem]">
+    <p>
       <slot name="desc" />
     </p>
   </div>
@@ -16,6 +16,7 @@
 
 <script>
 export default {
+  name: 'HomeCard',
   props: {
     title: {
       type: String,

@@ -58,6 +58,7 @@
 <script>
 import { ref, onMounted, watch } from 'vue';
 export default {
+  name: 'TheNavbar',
   setup() {
     const checkbox = ref(false);
     const html = ref(null);

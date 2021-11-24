@@ -13,5 +13,7 @@
   </svg>
 </template>
 <script>
-export default {};
+export default {
+  name: 'IconArrow',
+};
 </script>

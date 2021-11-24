@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-50">
     <section class="container mb-38">
       <div class="grid grid-cols-2 mt-16">
         <div>
@@ -24,6 +24,7 @@
         </div>
       </div>
     </section>
+
     <section class="container mb-21">
       <h2 class="header">A Creative Agency You<br />Can Trust</h2>
       <div class="grid grid-cols-6">
@@ -37,7 +38,8 @@
         </p>
       </div>
     </section>
-    <section class="container">
+
+    <section class="container mb-21">
       <h2 class="header mb-11">Elanode Expertise</h2>
       <div class="grid grid-cols-3 gap-10 min-h-53">
         <HomeCard title="Reliable">
@@ -69,5 +71,42 @@
         </HomeCard>
       </div>
     </section>
+
+    <section class="container mb-21">
+      <h2 class="header mb-16">Delivering First Class<br />Digital Services</h2>
+      <div class="grid grid-cols-2">
+        <HomeListContainer :list="digitalServicesList" />
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="header mb-13">Our Past Work</h2>
+    </section>
   </div>
 </template>
+
+<script>
+import { ref } from 'vue';
+export default {
+  name: 'HomePage',
+  setup() {
+    const digitalServicesList = ref([
+      {
+        title: 'Website Coding',
+        desc: 'We provide website coding services from scratch. No templates, drag and drop, or even third party services.',
+      },
+      {
+        title: 'Graphic Design',
+        desc: 'As your brand is the most important investment you need in your business, we could help you build a consistent and strategic branding for it.',
+      },
+      {
+        title: 'Social Media Management',
+        desc: 'Social media management is the curation of your brand’s social media activities to attract and engage audiences.',
+      },
+    ]);
+    return {
+      digitalServicesList,
+    };
+  },
+};
+</script>

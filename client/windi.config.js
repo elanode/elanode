@@ -31,10 +31,10 @@ export default defineConfig({
         'success-darken': '#4C7162',
         warning: '#969C4A',
       },
-      //   fontFamily: {
-      //     sans: ['Graphik', 'sans-serif'],
-      //     serif: ['Merriweather', 'serif'],
-      //   },
+      fontFamily: {
+        // sans: ['Graphik', 'sans-serif'],
+        serif: ['Arial', 'serif'],
+      },
       //   spacing: {
       //     128: '32rem',
       //     144: '36rem',
@@ -42,6 +42,9 @@ export default defineConfig({
       //   borderRadius: {
       //     '4xl': '2rem',
       //   },
+      // borderWidth: {
+      //   '4xl': '2rem',
+      // },
     },
   },
   shortcuts: {
