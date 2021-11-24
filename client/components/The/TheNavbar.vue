@@ -11,6 +11,7 @@
           dark:hover:bg-gray-700
           hover:bg-gray-100
           font-bold
+          transition-colors
         "
         >Home</NuxtLink
       >
@@ -23,6 +24,7 @@
           dark:hover:bg-gray-700
           hover:bg-gray-100
           font-bold
+          transition-colors
         "
         >About Us</NuxtLink
       >
@@ -35,6 +37,7 @@
           dark:hover:bg-gray-700
           hover:bg-gray-100
           font-bold
+          transition-colors
         "
         >Our Services</NuxtLink
       >
@@ -47,6 +50,7 @@
           dark:hover:bg-gray-700
           hover:bg-gray-100
           font-bold
+          transition-colors
         "
         >Contact</NuxtLink
       >

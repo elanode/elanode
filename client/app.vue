@@ -1,6 +1,7 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class="overflow-x-hidden mb-15">
     <TheNavbar />
     <NuxtPage />
+    <TheFooter />
   </div>
 </template>

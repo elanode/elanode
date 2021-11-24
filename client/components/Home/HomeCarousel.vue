@@ -30,6 +30,7 @@
         },
         1536: {
           slidesPerView: 3,
+          spaceBetween: 70,
         },
       }"
       class="relative"
@@ -42,13 +43,15 @@
         </div>
       </swiper-slide>
     </swiper>
-    <div class="text-center mt-5">
-      <h5 class="font-bold text-[1.75rem] mb-4">Social Media Management</h5>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Leo duis ut diam
-        quam nulla porttitor massa id.
-      </p>
+    <div class="text-center mt-5 flex justify-center">
+      <div class="xl:max-w-[54.125rem]">
+        <h5 class="font-bold text-[1.75rem] mb-4">Social Media Management</h5>
+        <p class="">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo duis
+          ut diam quam nulla porttitor massa id.
+        </p>
+      </div>
     </div>
   </div>
 </template>

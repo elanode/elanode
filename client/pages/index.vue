@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-50">
+  <div class="mb-36">
     <section class="container mb-38">
       <div class="grid lg:grid-cols-2 mt-16">
         <div>
@@ -87,8 +87,6 @@
       <h2 class="header mb-9">Our Past Work</h2>
       <HomeCarousel />
     </section>
-
-    <div>test</div>
   </div>
 </template>
 
