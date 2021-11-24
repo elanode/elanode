@@ -65,14 +65,21 @@ export default {
 
     onMounted(() => {
       html.value = document.querySelector('html');
-      checkbox.value =
+      const isDark =
         localStorage.theme === 'dark' ||
         (!('theme' in localStorage) &&
           window.matchMedia('(prefers-color-scheme: dark)').matches);
+      checkbox.value = isDark;
+
+      toggleMode(isDark);
     });
 
     watch(checkbox, (newValues) => {
-      if (newValues) {
+      toggleMode(newValues);
+    });
+
+    const toggleMode = (bool) => {
+      if (bool) {
         html.value.classList.add('dark');
         html.value.classList.remove('light');
         localStorage.theme = 'dark';
@@ -81,7 +88,7 @@ export default {
         html.value.classList.remove('dark');
         localStorage.theme = 'light';
       }
-    });
+    };
 
     return {
       checkbox,

@@ -11,5 +11,8 @@
   },
   "rules": {
     "vue/no-multiple-template-root": "off"
+  },
+  "dependencies": {
+    "swiper": "^7.3.1"
   }
 }
