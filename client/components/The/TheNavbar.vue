@@ -1,9 +1,11 @@
 <template>
   <header class="container h-4rem flex flex-row items-center justify-between">
-    <img src="/logo.svg" />
+    <NuxtLink to="/">
+      <img src="/logo.svg" alt="elanode logo" />
+    </NuxtLink>
     <nav class="flex items-center text-sm justify-center gap-x-8">
       <NuxtLink
-        to=""
+        to="/"
         class="
           px-4
           py-2
@@ -16,7 +18,7 @@
         >Home</NuxtLink
       >
       <NuxtLink
-        to=""
+        to="/about-us"
         class="
           px-4
           py-2

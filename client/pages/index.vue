@@ -57,7 +57,7 @@
         </HomeCard>
         <HomeCard title="Reliable">
           <template #icon>
-            <IconStar />
+            <IconNode />
           </template>
           <template #desc>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
