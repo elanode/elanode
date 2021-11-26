@@ -79,7 +79,12 @@
     <section class="container mb-21">
       <h2 class="header mb-16">Delivering First Class<br />Digital Services</h2>
       <div class="grid grid-cols-2">
-        <HomeListContainer :list="digitalServicesList" />
+        <div class="flex flex-col gap-6">
+          <template v-for="(item, idx) in digitalServicesList" :key="idx">
+            <HomeListItem :list-item="item" />
+          </template>
+          <BaseLink link="/" text="View Our Full Services" />
+        </div>
       </div>
     </section>
 

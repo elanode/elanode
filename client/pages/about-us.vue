@@ -1,6 +1,6 @@
 <template>
   <div class="mt-10 mb-20">
-    <div class="container">
+    <section class="container">
       <div class="grid grid-cols-12 mb-10">
         <h1 class="text-2xl font-bold text-primary col-span-3">About Us</h1>
         <h2 class="header col-span-5">
@@ -18,8 +18,8 @@
         alt="about us banner"
         class="w-full"
       />
-    </div>
-    <div class="container mt-16">
+    </section>
+    <section class="container mt-16">
       <div class="grid grid-cols-12 mb-10">
         <h2 class="text-2xl font-bold text-primary col-span-3">What We Do</h2>
         <h2 class="header max-w-[52.5rem] col-span-9">
@@ -45,7 +45,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 

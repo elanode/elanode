@@ -31,7 +31,7 @@
         >About Us</NuxtLink
       >
       <NuxtLink
-        to=""
+        to="/services"
         class="
           px-4
           py-2
@@ -44,7 +44,7 @@
         >Our Services</NuxtLink
       >
       <NuxtLink
-        to=""
+        to="/contact-us"
         class="
           px-4
           py-2
