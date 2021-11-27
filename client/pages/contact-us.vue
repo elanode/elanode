@@ -43,24 +43,66 @@
         </p>
       </div>
     </section>
-    <section class="container">
+    <section class="container mb-16">
       <h3 class="font-bold text-xl mb-4">How can we help you?</h3>
       <BaseToggleButtonGroup
         v-model="currentSelected"
         multiple
         :buttons="toggleButtons"
+        class="mb-4"
       />
-      {{ currentSelected }}
+      <v-form
+        :validation-schema="schema"
+        @submit="onSubmit"
+        v-slot="{ isSubmitting }"
+        class="flex-col gap-y-10"
+      >
+        <BaseFormInput label="Full Name" class="mb-4" name="Full name" />
+        <BaseFormInput label="Email" class="mb-4" name="Email" type="email" />
+        <BaseFormInput
+          label="Phone Number"
+          class="mb-4"
+          name="Phone number"
+          type="tel"
+        />
+        <BaseFormInput label="Details" class="mb-8" name="Details" />
+        <div class="flex w-full justify-end items-center gap-x-[0.875rem]">
+          <button
+            :disabled="isSubmitting"
+            class="text-primary font-bold text-base"
+          >
+            Send Message
+          </button>
+          <IconArrow />
+        </div>
+      </v-form>
       <!-- https://learnvue.co/2019/12/building-reusable-components-in-vuejs-tabs/ -->
     </section>
   </div>
 </template>
 
 <script>
+import { Form, Field, ErrorMessage } from 'vee-validate';
+import { object, string } from 'yup';
+
 export default {
   name: 'ContactUsPage',
+  components: {
+    VForm: Form,
+    VField: Field,
+    ErrorMessage: ErrorMessage,
+  },
   setup() {
+    const schema = object({
+      ['Full name']: string().required('Full name cannot be empty!'),
+      ['Email']: string().required('Email cannot be empty!').email(),
+      ['Phone number']: string()
+        .required('Phone number cannot be empty!')
+        .matches(/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/, 'Must be a phone number!'),
+      ['Details']: string().required('Details cannot be empty!'),
+    });
     const currentSelected = ref();
+    const fullName = ref('');
     const toggleButtons = ref([
       {
         id: 'website',
@@ -88,10 +130,28 @@ export default {
       console.log(currentSelected.value);
     });
 
+    // const onSubmit = (values) => {
+    //   console.log(values);
+    //   alert(JSON.stringify(values, null, 2));
+    // };
+
     return {
+      schema,
       currentSelected,
       toggleButtons,
+      fullName,
+      // onSubmit,
     };
+  },
+  methods: {
+    onSubmit(values) {
+      console.log(values);
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(JSON.stringify(values, null, 2));
+        }, 2000);
+      });
+    },
   },
 };
 </script>
