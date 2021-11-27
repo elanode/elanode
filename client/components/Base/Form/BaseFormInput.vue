@@ -1,37 +1,49 @@
 <template>
   <div class="flex flex-col">
-    <label :for="id" class="font-bold text-sm mb-1">{{ label }}</label>
     <Field
-      v-slot="{ field, meta }"
+      v-slot="{ field, errors, value }"
       :type="type"
       :name="name"
       :id="id"
-      placeholder="test"
-      ><input
+      class="transition-colors"
+    >
+      <label
+        v-if="!disableLabel"
+        :for="id"
+        class="font-bold text-sm mb-1"
+        :class="{ 'text-danger': errors.length > 0 }"
+        >{{ label }}{{ required && '*' }}</label
+      >
+      <input
+        :id="id"
+        :placeholder="placeholder"
         class="
           dark:text-white
           bg-transparent
           border-t-none border-x-none
-          !focus:rounded-lg
           focus:ring-primary
+          !focus:ring-4 !focus:outline-none !focus:ring-opacity-60
           placeholder-[#636363]
           font-bold
           text-lg
           border-b-2
           focus:border-b-none
+          py-1
         "
-        :class="{ 'border-danger': meta?.valid && meta?.dirty }"
+        :class="{
+          'border-danger': errors.length > 0,
+          'border-primary': errors.length < 1 && value,
+          'px-3': !disableLabel,
+        }"
         v-bind="field"
       />
-      <pre>{{ meta }}</pre>
     </Field>
-    <!-- <span class="text-danger font-bold mt-2">{{ errorMessage }}hello</span> -->
-    <ErrorMessage :name="name" class="text-danger font-bold mt-2" />
+    <ErrorMessage :name="name" class="text-danger font-bold mt-1 opacity-80" />
   </div>
 </template>
 
 <script>
-import { Form, Field, ErrorMessage } from 'vee-validate';
+import { Field, ErrorMessage } from 'vee-validate';
 
 export default {
   components: {
@@ -39,10 +51,17 @@ export default {
     ErrorMessage,
   },
   props: {
-    // modelValue: String,
     label: {
       type: String,
       required: true,
+    },
+    required: {
+      type: Boolean,
+      default: true,
+    },
+    placeholder: {
+      type: String,
+      default: '',
     },
     name: {
       type: String,
@@ -53,27 +72,14 @@ export default {
       required: false,
       default: 'text',
     },
-    errorMessage: {
-      type: String,
-      default: '',
+    disableLabel: {
+      type: Boolean,
+      default: false,
     },
   },
-  computed: {
-    id() {
-      return `${this.label}-${this.name}`;
-    },
-  },
-  methods: {
-    isValid(valid, touched) {
-      console.log(
-        '🚀 ~ file: BaseFormInput.vue ~ line 62 ~ isValid ~ touched',
-        touched
-      );
-      console.log(
-        '🚀 ~ file: BaseFormInput.vue ~ line 62 ~ isValid ~ valid',
-        valid
-      );
-    },
+  setup(props) {
+    const id = computed(() => `${props.label}-${props.name}`);
+    return { id };
   },
 };
 </script>

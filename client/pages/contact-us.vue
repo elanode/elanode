@@ -43,7 +43,7 @@
         </p>
       </div>
     </section>
-    <section class="container">
+    <section class="container mb-16">
       <h3 class="font-bold text-xl mb-4">How can we help you?</h3>
       <BaseToggleButtonGroup
         v-model="currentSelected"
@@ -51,20 +51,6 @@
         :buttons="toggleButtons"
         class="mb-4"
       />
-      <!-- <Form
-        @submit="onSubmit"
-        :validation-schema="schema"
-        v-slot="{ isSubmitting }"
-      >
-        <BaseFormInput
-          v-model="fullName"
-          label="Full Name"
-          class="mb-10"
-          name="fullName"
-        />
-        <button :disabled="isSubmitting">Submit</button>
-      </Form> -->
-
       <v-form
         :validation-schema="schema"
         @submit="onSubmit"
@@ -72,11 +58,23 @@
         class="flex-col gap-y-10"
       >
         <BaseFormInput label="Full Name" class="mb-4" name="Full name" />
-        <BaseFormInput label="Email" class="mb-4" name="Email" />
-        <BaseFormInput label="Full Name" class="mb-4" name="Full name" />
-        <button :disabled="isSubmitting" :class="{ submitting: isSubmitting }">
-          Submit
-        </button>
+        <BaseFormInput label="Email" class="mb-4" name="Email" type="email" />
+        <BaseFormInput
+          label="Phone Number"
+          class="mb-4"
+          name="Phone number"
+          type="tel"
+        />
+        <BaseFormInput label="Details" class="mb-8" name="Details" />
+        <div class="flex w-full justify-end items-center gap-x-[0.875rem]">
+          <button
+            :disabled="isSubmitting"
+            class="text-primary font-bold text-base"
+          >
+            Send Message
+          </button>
+          <IconArrow />
+        </div>
       </v-form>
       <!-- https://learnvue.co/2019/12/building-reusable-components-in-vuejs-tabs/ -->
     </section>
@@ -84,30 +82,25 @@
 </template>
 
 <script>
-import * as VeeValidate from 'vee-validate';
+import { Form, Field, ErrorMessage } from 'vee-validate';
 import { object, string } from 'yup';
 
 export default {
   name: 'ContactUsPage',
-  // components: {
-  //   Form,
-  //   Field,
-  //   ErrorMessage,
-  // },
   components: {
-    // Components were renamed to avoid conflicts of HTML form element without a vue compiler
-    VForm: VeeValidate.Form,
-    VField: VeeValidate.Field,
-    ErrorMessage: VeeValidate.ErrorMessage,
+    VForm: Form,
+    VField: Field,
+    ErrorMessage: ErrorMessage,
   },
   setup() {
     const schema = object({
-      // email: string().required().email(),
-      // password: string().required().min(8),
-      ['Full name']: string().required(),
-      ['Email']: string().required().email(),
+      ['Full name']: string().required('Full name cannot be empty!'),
+      ['Email']: string().required('Email cannot be empty!').email(),
+      ['Phone number']: string()
+        .required('Phone number cannot be empty!')
+        .matches(/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/, 'Must be a phone number!'),
+      ['Details']: string().required('Details cannot be empty!'),
     });
-    // const schema = ref();
     const currentSelected = ref();
     const fullName = ref('');
     const toggleButtons = ref([

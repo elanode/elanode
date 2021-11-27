@@ -3,7 +3,7 @@
     <div id="teleport-target" class=""></div>
     <div class="mb-15">
       <TheNavbar />
-      <NuxtPage />
+      <slot />
       <LazyTheFooter />
     </div>
   </div>
