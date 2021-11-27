@@ -30,10 +30,15 @@ export default defineConfig({
         success: '#31C186',
         'success-darken': '#4C7162',
         warning: '#969C4A',
+        danger: '#f42f1e',
+        transparent: 'transparent',
       },
       fontFamily: {
         // sans: ['Graphik', 'sans-serif'],
         serif: ['Arial', 'serif'],
+      },
+      borderWidth: {
+        none: '0',
       },
       //   spacing: {
       //     128: '32rem',
@@ -88,6 +93,7 @@ export default defineConfig({
   //       }
   //       addComponents(buttons)
   //     }),
+  plugins: [require('windicss/plugin/forms')],
   //     plugin(({ addDynamic, variants }) => {
   //       addDynamic('skew', ({ Utility, Style }) => {
   //         return Utility.handler

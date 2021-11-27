@@ -49,18 +49,67 @@
         v-model="currentSelected"
         multiple
         :buttons="toggleButtons"
+        class="mb-4"
       />
-      {{ currentSelected }}
+      <!-- <Form
+        @submit="onSubmit"
+        :validation-schema="schema"
+        v-slot="{ isSubmitting }"
+      >
+        <BaseFormInput
+          v-model="fullName"
+          label="Full Name"
+          class="mb-10"
+          name="fullName"
+        />
+        <button :disabled="isSubmitting">Submit</button>
+      </Form> -->
+
+      <v-form
+        :validation-schema="schema"
+        @submit="onSubmit"
+        v-slot="{ isSubmitting }"
+        class="flex-col gap-y-10"
+      >
+        <BaseFormInput label="Full Name" class="mb-4" name="Full name" />
+        <BaseFormInput label="Email" class="mb-4" name="Email" />
+        <BaseFormInput label="Full Name" class="mb-4" name="Full name" />
+        <button :disabled="isSubmitting" :class="{ submitting: isSubmitting }">
+          Submit
+        </button>
+      </v-form>
       <!-- https://learnvue.co/2019/12/building-reusable-components-in-vuejs-tabs/ -->
     </section>
   </div>
 </template>
 
 <script>
+import * as VeeValidate from 'vee-validate';
+import { object, string } from 'yup';
+
 export default {
   name: 'ContactUsPage',
+  // components: {
+  //   Form,
+  //   Field,
+  //   ErrorMessage,
+  // },
+  components: {
+    // Components were renamed to avoid conflicts of HTML form element without a vue compiler
+    VForm: VeeValidate.Form,
+    VField: VeeValidate.Field,
+    ErrorMessage: VeeValidate.ErrorMessage,
+  },
   setup() {
+    const schema = object({
+      // email: string().required().email(),
+      // password: string().required().min(8),
+      ['Full name']: string().required(),
+      ['Email']: string().required().email(),
+    });
+    // const schema = ref();
     const currentSelected = ref();
+    const fullName = ref('');
     const toggleButtons = ref([
       {
         id: 'website',
@@ -88,10 +137,28 @@ export default {
       console.log(currentSelected.value);
     });
 
+    // const onSubmit = (values) => {
+    //   console.log(values);
+    //   alert(JSON.stringify(values, null, 2));
+    // };
+
     return {
+      schema,
       currentSelected,
       toggleButtons,
+      fullName,
+      // onSubmit,
     };
+  },
+  methods: {
+    onSubmit(values) {
+      console.log(values);
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(JSON.stringify(values, null, 2));
+        }, 2000);
+      });
+    },
   },
 };
 </script>
