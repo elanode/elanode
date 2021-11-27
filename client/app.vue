@@ -4,7 +4,7 @@
     <div class="mb-15">
       <TheNavbar />
       <NuxtPage />
-      <TheFooter />
+      <LazyTheFooter />
     </div>
   </div>
 </template>

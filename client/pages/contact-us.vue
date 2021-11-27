@@ -51,6 +51,7 @@
         :buttons="toggleButtons"
       />
       {{ currentSelected }}
+      <!-- https://learnvue.co/2019/12/building-reusable-components-in-vuejs-tabs/ -->
     </section>
   </div>
 </template>
