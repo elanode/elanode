@@ -10,3 +10,9 @@
     />
   </svg>
 </template>
+
+<script>
+export default {
+  name: 'IconArrowButton',
+};
+</script>

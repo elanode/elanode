@@ -18,5 +18,3 @@ export default {
   name: 'IconNode',
 };
 </script>
-
-<style></style>

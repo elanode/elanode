@@ -27,5 +27,3 @@ export default {
   name: 'IconEmail',
 };
 </script>
-
-<style></style>
