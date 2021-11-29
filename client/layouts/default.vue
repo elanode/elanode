@@ -3,7 +3,9 @@
     <div id="teleport-target" class=""></div>
     <div class="mb-15">
       <TheNavbar />
-      <slot />
+      <div class="min-h-[54vh]">
+        <slot />
+      </div>
       <LazyTheFooter />
     </div>
   </div>

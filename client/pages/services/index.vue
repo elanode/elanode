@@ -41,42 +41,42 @@ export default {
       {
         title: 'Website Coding',
         desc: 'We provide website coding services from scratch. No templates, drag and drop, or even third party services.',
-        link: '/',
+        link: '/services/website-coding',
       },
       {
         title: 'SEO Management',
         desc: 'Search Engine Optimisation (SEO) is the process taken to raise a website’s position on the search result page, boosting visibility.',
-        link: '/',
+        link: '/services/seo-management',
       },
       {
         title: 'Mobile Application Development (Android/iOS)',
         desc: 'We offer full cycle mobile application development services for Android and iOS to help clients digitalize their business ideas into applications.',
-        link: '/',
+        link: '/services/mobile-application-development',
       },
       {
         title: 'Social Media Management',
         desc: 'Social media management is the curation of your brand’s social media activities to attract and engage audiences.',
-        link: '/',
+        link: '/services/social-media-management',
       },
       {
         title: 'Photography & Videography Services',
         desc: 'We provide professional photography and videography services to boost up your sales and magnetize more clients towards your brand.',
-        link: '/',
+        link: '/services/photography-videography-services',
       },
       {
         title: 'Graphic Design',
         desc: 'As your brand is the most important investment you need in your business, we could help you build a consistent and strategic branding for it.',
-        link: '/',
+        link: '/services/graphic-design',
       },
       {
         title: 'UI/UX Design',
         desc: 'User experience is how a person feels when interfacing with a system.',
-        link: '/',
+        link: '/services/ui-ux-design',
       },
       {
         title: 'Marketplace Management',
         desc: 'Setting up an account/store on the marketplace is one thing, but managing, updating, and selling your products is a completely different matter.',
-        link: '/',
+        link: '/services/marketplace-management',
       },
     ]);
 

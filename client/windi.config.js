@@ -94,7 +94,10 @@ export default defineConfig({
   //       }
   //       addComponents(buttons)
   //     }),
-  plugins: [require('windicss/plugin/forms')],
+  plugins: [
+    require('windicss/plugin/forms'),
+    require('windicss/plugin/aspect-ratio'),
+  ],
   //     plugin(({ addDynamic, variants }) => {
   //       addDynamic('skew', ({ Utility, Style }) => {
   //         return Utility.handler
