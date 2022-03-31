@@ -1,5 +1,6 @@
 <template>
   <div class="mb-36">
+    <TheLinesBg2 class="top-[7%] sm:top-[5%]" />
     <section class="container mb-38">
       <div class="grid lg:grid-cols-2 mt-16">
         <div>
@@ -22,6 +23,7 @@
             </div>
           </div>
         </div>
+        <HomePolygons />
       </div>
     </section>
 

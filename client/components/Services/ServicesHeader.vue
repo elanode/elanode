@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div class="flex gap-x-[3.813rem]">
+    <div class="flex gap-x-[3.75rem]">
       <div>
         <div class="w-[434px] h-[333px]">image here</div>
       </div>

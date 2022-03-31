@@ -14,7 +14,7 @@
             text-left
             font-bold
             text-lg
-            rounded-lg
+            rounded-xl
             shadow-md
             cursor-default
             focus:outline-none

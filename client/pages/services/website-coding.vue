@@ -2,13 +2,13 @@
   <div class="mb-20">
     <ServicesHeaderWrapper>
       <ServicesHeader title="Website Coding">
-        <p>
+        <p class="text-secondary">
           We provide website coding services from scratch. No templates, drag
           and drop, or even third party services. To cater to your specific
           needs, we can code many types of websites such as company profile,
           e-commerce, portfolio, product catalog, marketplace, and many more.
         </p>
-        <p>
+        <p class="text-secondary">
           As we are coding your website from scratch we can assure you that your
           website is safer than DDos. Compared to websites from third party
           services the website we code will surely have faster loading time,
@@ -31,6 +31,10 @@
       <div class="max-w-[34.375rem]">
         <ServicesSelect />
       </div>
+    </section>
+
+    <section class="container mt-13">
+      <ServicesEstimation />
     </section>
   </div>
 </template>

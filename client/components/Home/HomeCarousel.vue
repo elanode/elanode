@@ -15,30 +15,32 @@
         prevEl: '.prevEl',
         nextEl: '.nextEl',
       }"
-      :slidesPerView="1"
-      :spaceBetween="15"
+      :slides-per-view="1"
+      :space-between="15"
       :initial-slide="1"
       :centered-slides="true"
       :breakpoints="{
-        639: {
+        '639': {
           slidesPerView: 1.5,
           spaceBetween: 30,
         },
-        1024: {
+        '1024': {
           slidesPerView: 2,
-          spaceBetween: 70,
+          spaceBetween: 80,
         },
-        1536: {
+        '1536': {
           slidesPerView: 3,
           spaceBetween: 70,
         },
       }"
-      class="relative"
+      class="relative home-swiper"
     >
       <swiper-slide v-for="(item, idx) in 20" :key="idx">
-        <div class="lg:(h-[300px] pt-20) pt-16 w-full relative">
+        <div
+          class="lg:(pt-[5rem]) pt-16 w-full relative transition duration-300"
+        >
           <div
-            class="dark:bg-[#405561] light:bg-[#E6F3FA] w-full h-54 rounded-xl"
+            class="dark:bg-[#405561] light:bg-[#E6F3FA] w-full h-[220px] rounded-xl"
           ></div>
         </div>
       </swiper-slide>
@@ -73,9 +75,9 @@ export default {
 </script>
 
 <style scoped>
-.swiper-slide > div {
+/* .swiper-slide > div {
   @apply transition-all transition duration-300;
-}
+} */
 
 .swiper-slide.swiper-slide-active > div {
   @apply lg:(absolute z-10 transform origin-bottom scale-125 mt-1);
