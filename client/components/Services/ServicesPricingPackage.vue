@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="header mb-10">{{ title }}</h2>
+    <!-- <h2 class="header mb-10">{{ title }}</h2>
     <div class="grid lg:grid-cols-2 gap-x-9 gap-y-6">
       <div
         class="
@@ -114,53 +114,53 @@
           </RadioGroupOption>
         </div>
       </RadioGroup>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import {
-  RadioGroup,
-  RadioGroupLabel,
-  RadioGroupDescription,
-  RadioGroupOption,
-} from '@headlessui/vue';
+// import {
+//   RadioGroup,
+//   RadioGroupLabel,
+//   RadioGroupDescription,
+//   RadioGroupOption,
+// } from '@headlessui/vue';
 
 export default {
   name: 'ServicesPricingPackage',
-  props: {
-    modelValue: {
-      type: Object,
-      required: true,
-    },
-    title: {
-      type: String,
-      default: 'Pricing Packages',
-    },
-    packages: {
-      type: Array,
-      required: true,
-    },
-  },
-  components: {
-    RadioGroup,
-    RadioGroupLabel,
-    RadioGroupDescription,
-    RadioGroupOption,
-  },
-  setup(props, { emit }) {
-    const selected = ref(props.packages[0]);
+  // props: {
+  //   modelValue: {
+  //     type: Object,
+  //     required: true,
+  //   },
+  //   title: {
+  //     type: String,
+  //     default: 'Pricing Packages',
+  //   },
+  //   packages: {
+  //     type: Array,
+  //     required: true,
+  //   },
+  // },
+  // components: {
+  //   RadioGroup,
+  //   RadioGroupLabel,
+  //   RadioGroupDescription,
+  //   RadioGroupOption,
+  // },
+  // setup(props, { emit }) {
+  //   const selected = ref(props.packages[0]);
 
-    onMounted(() => {
-      emit('update:modelValue', props.packages[0]);
-    });
+  //   onMounted(() => {
+  //     emit('update:modelValue', props.packages[0]);
+  //   });
 
-    watch(selected, (value) => {
-      emit('update:modelValue', value);
-    });
-    return {
-      selected,
-    };
-  },
+  //   watch(selected, (value) => {
+  //     emit('update:modelValue', value);
+  //   });
+  //   return {
+  //     selected,
+  //   };
+  // },
 };
 </script>

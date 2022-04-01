@@ -9,14 +9,7 @@
         elementum.
       </p>
       <div
-        class="
-          flex flex-col
-          md:flex-row
-          w-full
-          items-center
-          justify-center
-          gap-x-12 gap-y-3
-        "
+        class="flex flex-col md:flex-row w-full items-center justify-center gap-x-12 gap-y-3"
       >
         <div class="flex gap-x-5 items-center">
           <IconPhone />
@@ -43,7 +36,7 @@
         </p>
       </div>
     </section>
-    <section class="container mb-16">
+    <!-- <section class="container mb-16">
       <h3 class="font-bold text-xl mb-4">How can we help you?</h3>
       <BaseToggleButtonGroup
         v-model="currentSelected"
@@ -76,83 +69,82 @@
           <IconArrow />
         </div>
       </v-form>
-      <!-- https://learnvue.co/2019/12/building-reusable-components-in-vuejs-tabs/ -->
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
-import { Form, Field, ErrorMessage } from 'vee-validate';
-import { object, string } from 'yup';
+// import { Form, Field, ErrorMessage } from 'vee-validate';
+// import { object, string } from 'yup';
 
 export default {
   name: 'ContactUsPage',
-  components: {
-    VForm: Form,
-    VField: Field,
-    ErrorMessage: ErrorMessage,
-  },
-  setup() {
-    const schema = object({
-      ['Full name']: string().required('Full name cannot be empty!'),
-      ['Email']: string().required('Email cannot be empty!').email(),
-      ['Phone number']: string()
-        .required('Phone number cannot be empty!')
-        .matches(/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/, 'Must be a phone number!'),
-      ['Details']: string().required('Details cannot be empty!'),
-    });
-    const currentSelected = ref();
-    const fullName = ref('');
-    const toggleButtons = ref([
-      {
-        id: 'website',
-        value: 'website',
-        title: 'Website',
-      },
-      {
-        id: 'socialMedia',
-        value: 'social',
-        title: 'Social Media',
-      },
-      {
-        id: 'photography',
-        value: 'photography',
-        title: 'Photography',
-      },
-      {
-        id: 'others',
-        value: 'others',
-        title: 'Others',
-      },
-    ]);
+  // components: {
+  //   VForm: Form,
+  //   VField: Field,
+  //   ErrorMessage: ErrorMessage,
+  // },
+  // setup() {
+  //   const schema = object({
+  //     ['Full name']: string().required('Full name cannot be empty!'),
+  //     ['Email']: string().required('Email cannot be empty!').email(),
+  //     ['Phone number']: string()
+  //       .required('Phone number cannot be empty!')
+  //       .matches(/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/, 'Must be a phone number!'),
+  //     ['Details']: string().required('Details cannot be empty!'),
+  //   });
+  //   const currentSelected = ref();
+  //   const fullName = ref('');
+  //   const toggleButtons = ref([
+  //     {
+  //       id: 'website',
+  //       value: 'website',
+  //       title: 'Website',
+  //     },
+  //     {
+  //       id: 'socialMedia',
+  //       value: 'social',
+  //       title: 'Social Media',
+  //     },
+  //     {
+  //       id: 'photography',
+  //       value: 'photography',
+  //       title: 'Photography',
+  //     },
+  //     {
+  //       id: 'others',
+  //       value: 'others',
+  //       title: 'Others',
+  //     },
+  //   ]);
 
-    watch(currentSelected, () => {
-      console.log(currentSelected.value);
-    });
+  //   watch(currentSelected, () => {
+  //     console.log(currentSelected.value);
+  //   });
 
-    // const onSubmit = (values) => {
-    //   console.log(values);
-    //   alert(JSON.stringify(values, null, 2));
-    // };
+  //   // const onSubmit = (values) => {
+  //   //   console.log(values);
+  //   //   alert(JSON.stringify(values, null, 2));
+  //   // };
 
-    return {
-      schema,
-      currentSelected,
-      toggleButtons,
-      fullName,
-      // onSubmit,
-    };
-  },
-  methods: {
-    onSubmit(values) {
-      console.log(values);
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(JSON.stringify(values, null, 2));
-        }, 2000);
-      });
-    },
-  },
+  //   return {
+  //     schema,
+  //     currentSelected,
+  //     toggleButtons,
+  //     fullName,
+  //     // onSubmit,
+  //   };
+  // },
+  // methods: {
+  //   onSubmit(values) {
+  //     console.log(values);
+  //     return new Promise((resolve) => {
+  //       setTimeout(() => {
+  //         resolve(JSON.stringify(values, null, 2));
+  //       }, 2000);
+  //     });
+  //   },
+  // },
 };
 </script>
 

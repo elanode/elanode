@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-36">
+  <div class="mb-24">
     <TheLinesBg2 class="top-[7%] sm:top-[5%]" />
     <section class="container mb-38">
       <div class="grid lg:grid-cols-2 gap-x-[4.875rem] mt-16">
@@ -10,10 +10,10 @@
             Elanode is a creative digital agency based in Tangerang which aims
             to empower people and their businesses with digital solutions.
           </p>
-          <div class="grid grid-cols-2 gap-x-19 mt-[5.375rem]">
+          <!-- <div class="grid grid-cols-2 gap-x-19 mt-[5.375rem]">
             <div class="flex flex-col justify-between">
               <p class="mb-4">
-                Digital agency that increase your product value
+                Digital agency that increase your product valued
               </p>
               <BaseLink link="/" text="Our Work" />
             </div>
@@ -21,7 +21,7 @@
               <p class="mb-4">More than digital solution for your brand</p>
               <BaseLink link="/" text="Our Services" />
             </div>
-          </div>
+          </div> -->
         </div>
         <HomePolygons />
       </div>
@@ -33,7 +33,7 @@
       </h2>
       <div class="md:(grid grid-cols-6) items-start">
         <div class="col-span-2">
-          <BaseLink link="/" text="Let's Talk" class="mt-3 md:mt-5" />
+          <BaseLink link="/contact-us" text="Let's Talk" class="mt-3 md:mt-5" />
         </div>
         <p class="col-span-4 mt-5 md:mt-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -82,42 +82,40 @@
       <h2 class="header mb-16">Delivering First Class<br />Digital Services</h2>
       <div class="grid grid-cols-2">
         <div class="flex flex-col gap-6">
-          <template v-for="(item, idx) in digitalServicesList" :key="idx">
-            <HomeListItem :list-item="item" />
+          <template v-for="(item, idx) in digitalServicesList">
+            <HomeListItem :key="idx" :list-item="item" />
           </template>
-          <BaseLink link="/" text="View Our Full Services" />
+          <!-- <BaseLink link="/" text="View Our Full Services" /> -->
         </div>
       </div>
     </section>
 
-    <section class="container">
+    <!-- <section class="container">
       <h2 class="header mb-9">Our Past Work</h2>
       <HomeCarousel />
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
-import { ref } from 'vue';
 export default {
   name: 'HomePage',
-  setup() {
-    const digitalServicesList = ref([
-      {
-        title: 'Website Coding',
-        desc: 'We provide website coding services from scratch. No templates, drag and drop, or even third party services.',
-      },
-      {
-        title: 'Graphic Design',
-        desc: 'As your brand is the most important investment you need in your business, we could help you build a consistent and strategic branding for it.',
-      },
-      {
-        title: 'Social Media Management',
-        desc: 'Social media management is the curation of your brand’s social media activities to attract and engage audiences.',
-      },
-    ]);
+  data() {
     return {
-      digitalServicesList,
+      digitalServicesList: [
+        {
+          title: 'Technology Development',
+          desc: 'We provide website coding services from scratch. No templates, drag and drop, or even third party services.',
+        },
+        {
+          title: 'Graphic Design',
+          desc: 'As your brand is the most important investment you need in your business, we could help you build a consistent and strategic branding for it.',
+        },
+        {
+          title: 'Social Media Management',
+          desc: 'Social media management is the curation of your brand’s social media activities to attract and engage audiences.',
+        },
+      ],
     };
   },
 };

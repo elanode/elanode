@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <Field
+    <!-- <Field
       v-slot="{ field, errors, value }"
       :type="type"
       :name="name"
@@ -38,49 +38,49 @@
         v-bind="field"
       />
     </Field>
-    <ErrorMessage :name="name" class="text-danger font-bold mt-1 opacity-80" />
+    <ErrorMessage :name="name" class="text-danger font-bold mt-1 opacity-80" /> -->
   </div>
 </template>
 
 <script>
-import { Field, ErrorMessage } from 'vee-validate';
+// import { Field, ErrorMessage } from 'vee-validate';
 
 export default {
-  components: {
-    Field,
-    ErrorMessage,
-  },
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    required: {
-      type: Boolean,
-      default: true,
-    },
-    placeholder: {
-      type: String,
-      default: '',
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    type: {
-      type: String,
-      required: false,
-      default: 'text',
-    },
-    disableLabel: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  setup(props) {
-    const id = computed(() => `${props.label}-${props.name}`);
-    return { id };
-  },
+  // components: {
+  //   Field,
+  //   ErrorMessage,
+  // },
+  // props: {
+  //   label: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   required: {
+  //     type: Boolean,
+  //     default: true,
+  //   },
+  //   placeholder: {
+  //     type: String,
+  //     default: '',
+  //   },
+  //   name: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   type: {
+  //     type: String,
+  //     required: false,
+  //     default: 'text',
+  //   },
+  //   disableLabel: {
+  //     type: Boolean,
+  //     default: false,
+  //   },
+  // },
+  // setup(props) {
+  //   const id = computed(() => `${props.label}-${props.name}`);
+  //   return { id };
+  // },
 };
 </script>
 

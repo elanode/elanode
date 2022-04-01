@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="font-bold text-2xl mb-8">Select Website Type</h2>
+    <!-- <h2 class="font-bold text-2xl mb-8">Select Website Type</h2>
     <Listbox v-model="selectedPerson" class="bg-transparent text-primary">
       <div class="relative mt-1">
         <ListboxButton
@@ -43,7 +43,7 @@
               pointer-events-none
             "
           >
-            <!-- <SelectorIcon class="w-5 h-5 text-gray-400" aria-hidden="true" /> -->
+            <SelectorIcon class="w-5 h-5 text-gray-400" aria-hidden="true" />
             <IconCaret />
           </span>
         </ListboxButton>
@@ -110,45 +110,45 @@
           </ListboxOptions>
         </transition>
       </div>
-    </Listbox>
+    </Listbox> -->
   </div>
 </template>
 
 <script>
-import {
-  Listbox,
-  ListboxLabel,
-  ListboxButton,
-  ListboxOptions,
-  ListboxOption,
-} from '@headlessui/vue';
+// import {
+//   Listbox,
+//   ListboxLabel,
+//   ListboxButton,
+//   ListboxOptions,
+//   ListboxOption,
+// } from '@headlessui/vue';
 // import { CheckIcon, SelectorIcon } from '@heroicons/vue/solid';
 
 export default {
   name: 'ServicesSelect',
-  components: {
-    Listbox,
-    ListboxLabel,
-    ListboxButton,
-    ListboxOptions,
-    ListboxOption,
-  },
-  setup() {
-    const people = [
-      { name: 'Wade Cooper' },
-      { name: 'Arlene Mccoy' },
-      { name: 'Devon Webb' },
-      { name: 'Tom Cook' },
-      { name: 'Tanya Fox' },
-      { name: 'Hellen Schmidt' },
-    ];
-    const selectedPerson = ref({});
+  // components: {
+  //   Listbox,
+  //   ListboxLabel,
+  //   ListboxButton,
+  //   ListboxOptions,
+  //   ListboxOption,
+  // },
+  // setup() {
+  //   const people = [
+  //     { name: 'Wade Cooper' },
+  //     { name: 'Arlene Mccoy' },
+  //     { name: 'Devon Webb' },
+  //     { name: 'Tom Cook' },
+  //     { name: 'Tanya Fox' },
+  //     { name: 'Hellen Schmidt' },
+  //   ];
+  //   const selectedPerson = ref({});
 
-    return {
-      people,
-      selectedPerson,
-    };
-  },
+  //   return {
+  //     people,
+  //     selectedPerson,
+  //   };
+  // },
 };
 </script>
 

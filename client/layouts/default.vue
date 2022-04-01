@@ -4,7 +4,7 @@
     <div class="mb-15">
       <TheNavbar />
       <div class="min-h-[54vh]">
-        <slot />
+        <Nuxt />
       </div>
       <LazyTheFooter />
     </div>

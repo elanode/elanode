@@ -1,6 +1,6 @@
 <template>
   <div class="w-screen h-screen pt-[11rem] flex">
-    <div class="container">
+    <!-- <div class="container">
       <NuxtLink to="/" class="flex items-center gap-x-[1.125rem] text-primary">
         <IconLogo class="fill-current" />
         <span class="font-bold text-[1.625rem] leading-[2.731rem]"
@@ -65,32 +65,32 @@
           </v-form>
         </section>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import { Form, Field, ErrorMessage } from 'vee-validate';
-import { object, string } from 'yup';
+// import { Form, Field, ErrorMessage } from 'vee-validate';
+// import { object, string } from 'yup';
 
 export default {
   layout: 'plain',
   name: 'ContactUsPage',
-  components: {
-    VForm: Form,
-    VField: Field,
-    ErrorMessage: ErrorMessage,
-  },
-  setup() {
-    const schema = object({
-      ['Email']: string().required('Email cannot be empty!').email(),
-      ['Password']: string().required('Password cannot be empty!'),
-    });
+  // components: {
+  //   VForm: Form,
+  //   VField: Field,
+  //   ErrorMessage: ErrorMessage,
+  // },
+  // setup() {
+  //   const schema = object({
+  //     ['Email']: string().required('Email cannot be empty!').email(),
+  //     ['Password']: string().required('Password cannot be empty!'),
+  //   });
 
-    return {
-      schema,
-    };
-  },
+  //   return {
+  //     schema,
+  //   };
+  // },
 };
 </script>
 

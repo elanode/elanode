@@ -6,99 +6,65 @@
     <nav class="flex items-center text-sm justify-center gap-x-8">
       <NuxtLink
         to="/"
-        class="
-          px-4
-          py-2
-          rounded-md
-          dark:hover:bg-gray-700
-          hover:bg-gray-100
-          font-bold
-          transition-colors
-        "
+        class="px-4 py-2 rounded-md dark:hover:bg-gray-700 hover:bg-gray-100 font-bold transition-colors"
         >Home</NuxtLink
       >
       <NuxtLink
         to="/about-us"
-        class="
-          px-4
-          py-2
-          rounded-md
-          dark:hover:bg-gray-700
-          hover:bg-gray-100
-          font-bold
-          transition-colors
-        "
+        class="px-4 py-2 rounded-md dark:hover:bg-gray-700 hover:bg-gray-100 font-bold transition-colors"
         >About Us</NuxtLink
       >
-      <NuxtLink
+      <!-- <NuxtLink
         to="/services"
-        class="
-          px-4
-          py-2
-          rounded-md
-          dark:hover:bg-gray-700
-          hover:bg-gray-100
-          font-bold
-          transition-colors
-        "
+        class="px-4 py-2 rounded-md dark:hover:bg-gray-700 hover:bg-gray-100 font-bold transition-colors"
         >Our Services</NuxtLink
-      >
+      > -->
       <NuxtLink
         to="/contact-us"
-        class="
-          px-4
-          py-2
-          rounded-md
-          dark:hover:bg-gray-700
-          hover:bg-gray-100
-          font-bold
-          transition-colors
-        "
+        class="px-4 py-2 rounded-md dark:hover:bg-gray-700 hover:bg-gray-100 font-bold transition-colors"
         >Contact</NuxtLink
       >
     </nav>
-    <input type="checkbox" name="" v-model="checkbox" id="checkbox" />
+    <input id="checkbox" v-model="checkbox" type="checkbox" name="" />
   </header>
 </template>
 
 <script>
-import { ref, onMounted, watch } from 'vue';
 export default {
   name: 'TheNavbar',
-  setup() {
-    const checkbox = ref(false);
-    const html = ref(null);
+  data() {
+    return {
+      checkbox: false,
+      html: null,
+    };
+  },
+  watch: {
+    checkbox(val) {
+      this.toggleMode(val);
+    },
+  },
+  mounted() {
+    this.html = document.querySelector('html');
+    const isDark =
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches);
+    this.checkbox = isDark;
 
-    onMounted(() => {
-      html.value = document.querySelector('html');
-      const isDark =
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches);
-      checkbox.value = isDark;
-
-      toggleMode(isDark);
-    });
-
-    watch(checkbox, (newValues) => {
-      toggleMode(newValues);
-    });
-
-    const toggleMode = (bool) => {
+    this.toggleMode(isDark);
+  },
+  methods: {
+    toggleMode(bool) {
       if (bool) {
-        html.value.classList.add('dark');
-        html.value.classList.remove('light');
+        this.html.classList.add('dark');
+        this.html.classList.remove('light');
         localStorage.theme = 'dark';
       } else {
-        html.value.classList.add('light');
-        html.value.classList.remove('dark');
+        this.html.classList.add('light');
+        this.html.classList.remove('dark');
         localStorage.theme = 'light';
       }
-    };
-
-    return {
-      checkbox,
-    };
+    },
   },
 };
 </script>

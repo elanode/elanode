@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="absolute w-full flex justify-end gap-x-4 lg:mb-9 z-20">
+    <!-- <div class="absolute w-full flex justify-end gap-x-4 lg:mb-9 z-20">
       <button class="prevEl">
         <IconArrowButton class="fill-current text-primary" />
       </button>
@@ -54,23 +54,23 @@
           ut diam quam nulla porttitor massa id.
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import SwiperCore, { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/navigation';
+// import SwiperCore, { Navigation } from 'swiper';
+// import { Swiper, SwiperSlide } from 'swiper/vue';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 
-SwiperCore.use([Navigation]);
+// SwiperCore.use([Navigation]);
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
+  // components: {
+  //   Swiper,
+  //   SwiperSlide,
+  // },
 };
 </script>
 
