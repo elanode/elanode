@@ -2,7 +2,7 @@
   <div class="mb-36">
     <TheLinesBg2 class="top-[7%] sm:top-[5%]" />
     <section class="container mb-38">
-      <div class="grid lg:grid-cols-2 mt-16">
+      <div class="grid lg:grid-cols-2 gap-x-[4.875rem] mt-16">
         <div>
           <span class="text-primary font-bold mb-6px">Digital Agency</span>
           <h1 class="text-[4rem] mb-[1.625rem] font-bold">Elanode</h1>
