@@ -1,38 +1,47 @@
 <template>
-  <div class="relative h-[430px] w-[540px] max-w-screen">
+  <div>
+    <div
+      class="hidden sm:block relative mx-auto overflow-visible h-[430px] w-full max-w-[425px] lg:(w-screen w-[100%] max-w-[540px])"
+    >
+      <img
+        class="absolute glow-effect transform -translate-x-1/2 w-[35%] left-1/2 bottom-[20%] sm:(left-1/2 bottom-[20%]) 2xl:(w-auto bottom-[10%])"
+        src="~assets/images/polygon_home/Polygon_1.png"
+        alt=""
+      />
+      <img
+        class="absolute glow-effect transform -translate-y-1/2 w-[35%] top-1/2 2xl:(w-auto)"
+        src="~assets/images/polygon_home/Polygon_2.png"
+        alt=""
+      />
+      <img
+        class="absolute glow-effect transform -translate-x-1/2 w-[35%] left-1/2 top-[20%] 2xl:(w-auto top-[10%])"
+        src="~assets/images/polygon_home/Polygon_3.png"
+        alt=""
+      />
+      <img
+        class="absolute glow-effect w-[23%] left-[10%] top-[12%]) lg:(left-[10%] w-[23%] top-[12%] 2xl:(w-auto top-0)"
+        src="~assets/images/polygon_home/Polygon_4.png"
+        alt=""
+      />
+      <img
+        class="absolute glow-effect w-[18%] right-[14%] top-[18%] lg:(right-[14%] w-[18%] top-[18%]) 2xl:(w-auto top-[10%] right-[13%])"
+        src="~assets/images/polygon_home/Polygon_5.png"
+        alt=""
+      />
+      <img
+        class="absolute glow-effect transform -translate-y-1/2 w-[30%] top-1/2 right-[6%] lg:(top-1/2 w-[30%] right-[6%]) 2xl:(w-auto)"
+        src="~assets/images/polygon_home/Polygon_6.png"
+        alt=""
+      />
+      <img
+        class="absolute glow-effect w-[18%] right-[14%] bottom-[18%] lg:(right-[14%] w-[18%] bottom-[18%]) 2xl:(w-auto bottom-[10%] right-[13%])"
+        src="~assets/images/polygon_home/Polygon_7.png"
+        alt=""
+      />
+    </div>
     <img
-      class="absolute glow-effect w-[37%] transform -translate-x-1/2 left-1/2 bottom-[40px]"
-      src="~assets/images/polygon_home/Polygon_1.png"
-      alt=""
-    />
-    <img
-      class="absolute glow-effect w-[37%] transform -translate-y-1/2 top-1/2"
-      src="~assets/images/polygon_home/Polygon_2.png"
-      alt=""
-    />
-    <img
-      class="absolute glow-effect w-[37%] transform -translate-x-1/2 left-1/2 top-[40px]"
-      src="~assets/images/polygon_home/Polygon_3.png"
-      alt=""
-    />
-    <img
-      class="absolute glow-effect left-[50px]"
-      src="~assets/images/polygon_home/Polygon_4.png"
-      alt=""
-    />
-    <img
-      class="absolute glow-effect top-[45px] right-[70px]"
-      src="~assets/images/polygon_home/Polygon_5.png"
-      alt=""
-    />
-    <img
-      class="absolute glow-effect transform -translate-y-1/2 top-1/2 right-[30px]"
-      src="~assets/images/polygon_home/Polygon_6.png"
-      alt=""
-    />
-    <img
-      class="absolute glow-effect bottom-[45px] right-[70px]"
-      src="~assets/images/polygon_home/Polygon_7.png"
+      class="sm:hidden"
+      src="~assets/images/polygon_home/Picture.png"
       alt=""
     />
   </div>
