@@ -1,12 +1,14 @@
 <template>
   <div class="mt-10 mb-20">
     <section class="container">
-      <div class="grid grid-cols-12 mb-10">
-        <h1 class="text-2xl font-bold text-primary col-span-3">About Us</h1>
+      <div class="flex flex-col lg:grid lg:grid-cols-12 mb-10 gap-3">
+        <h1 class="text-2xl font-bold text-primary col-span-2 xl:col-span-3">
+          About Us
+        </h1>
         <h2 class="header col-span-5">
           We Provide Creative <br />Digital Solution
         </h2>
-        <p class="col-span-4">
+        <p class="col-span-5 xl:col-span-4">
           Elanode is a creative digital agency based in Tangerang which aims to
           empower people and their businesses with digital solutions. In doing
           our work, we focus on each unique project with originality to relay
@@ -20,17 +22,15 @@
       />
     </section>
     <section class="container mt-16">
-      <div class="grid grid-cols-12 mb-10">
+      <div class="flex flex-col sm:grid sm:grid-cols-12 gap-3 mb-10">
         <h2 class="text-2xl font-bold text-primary col-span-3">What We Do</h2>
-        <h2 class="header max-w-[52.5rem] col-span-9">
+        <h2 class="header max-w-[52.5rem] leading-[2.625rem] col-span-9">
           We Help You Transform Digitally with Innovative Solution for the
           Better Future
         </h2>
       </div>
-      <div class="flex gap-x-20 items-center">
-        <div>
-          <div class="w-[371px] h-[281px]">image here</div>
-        </div>
+      <div class="flex flex-col lg:flex-row gap-x-10 2xl:gap-x-20 items-center">
+        <img src="~assets/images/polygons_about_us.png" alt="" />
         <div>
           <h3 class="text-3xl font-bold text-primary mb-6">
             What Makes Elanode Different

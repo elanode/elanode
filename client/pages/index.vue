@@ -2,7 +2,7 @@
   <div class="mb-24">
     <TheLinesBg2 class="top-[7%] sm:top-[5%]" />
     <section class="container mb-38">
-      <div class="grid lg:grid-cols-2 gap-x-[4.875rem] mt-16">
+      <div class="grid lg:grid-cols-2 gap-x-[4.875rem] mt-16 items-center">
         <div>
           <span class="text-primary font-bold mb-6px">Digital Agency</span>
           <h1 class="text-[4rem] mb-[1.625rem] font-bold">Elanode</h1>
@@ -79,14 +79,23 @@
     </section>
 
     <section class="container mb-21">
-      <h2 class="header mb-16">Delivering First Class<br />Digital Services</h2>
-      <div class="grid grid-cols-2">
-        <div class="flex flex-col gap-6">
+      <h2 class="header lg:mb-16">
+        Delivering First Class<br />Digital Services
+      </h2>
+      <div
+        class="flex flex-col lg:grid lg:grid-cols-2 gap-x-6 xl:gap-x-20 2xl:gap-x-32"
+      >
+        <div class="order-2 lg:order-1 flex flex-col gap-6">
           <template v-for="(item, idx) in digitalServicesList">
             <HomeListItem :key="idx" :list-item="item" />
           </template>
           <!-- <BaseLink link="/" text="View Our Full Services" /> -->
         </div>
+        <img
+          class="order-1 lg:order-2"
+          src="~assets/images/polygons_index_2.png"
+          alt=""
+        />
       </div>
     </section>
 

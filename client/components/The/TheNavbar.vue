@@ -25,7 +25,8 @@
         >Contact</NuxtLink
       >
     </nav>
-    <input id="checkbox" v-model="checkbox" type="checkbox" name="" />
+    <TheModeToggler :checkbox.sync="checkbox" />
+    <!-- <input id="checkbox" v-model="checkbox" type="checkbox" name="" /> -->
   </header>
 </template>
 

@@ -24,7 +24,7 @@
             >Home</NuxtLink
           >
           <NuxtLink
-            to="/"
+            to="/about-us"
             class="rounded-md py-1 px-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
             >About Us</NuxtLink
           >
@@ -41,7 +41,7 @@
             >Our Services</NuxtLink
           > -->
           <NuxtLink
-            to="/"
+            to="/contact-us"
             class="rounded-md py-1 px-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
             >Contact</NuxtLink
           >
