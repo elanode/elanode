@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'TheNavbar',
+  name: "TheNavbar",
   data() {
     return {
       checkbox: false,
@@ -45,11 +45,11 @@ export default {
     },
   },
   mounted() {
-    this.html = document.querySelector('html');
+    this.html = document.querySelector("html");
     const isDark =
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches);
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
     this.checkbox = isDark;
 
     this.toggleMode(isDark);
@@ -57,13 +57,13 @@ export default {
   methods: {
     toggleMode(bool) {
       if (bool) {
-        this.html.classList.add('dark');
-        this.html.classList.remove('light');
-        localStorage.theme = 'dark';
+        this.html.classList.add("dark");
+        this.html.classList.remove("light");
+        localStorage.theme = "dark";
       } else {
-        this.html.classList.add('light');
-        this.html.classList.remove('dark');
-        localStorage.theme = 'light';
+        this.html.classList.add("light");
+        this.html.classList.remove("dark");
+        localStorage.theme = "light";
       }
     },
   },
