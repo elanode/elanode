@@ -2,14 +2,19 @@ export default {
   target: "static",
 
   head: {
-    title: "elanode",
+    title: "Elanode - Your Digital Solution - Indonesia",
     htmlAttrs: {
       lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Elanode is a creative digital agency based in Tangerang, Indonesia which aims to empower people and their businesses with digital solutions.",
+      },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [

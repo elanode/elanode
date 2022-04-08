@@ -7,8 +7,9 @@
           <span class="text-primary font-bold mb-6px">Digital Agency</span>
           <h1 class="text-[4rem] mb-[1.625rem] font-bold">Elanode</h1>
           <p class="text-xl">
-            Elanode is a creative digital agency based in Tangerang which aims
-            to empower people and their businesses with digital solutions.
+            Elanode is a creative digital agency based in Tangerang, Indonesia
+            which aims to empower people and their businesses with digital
+            solutions.
           </p>
           <!-- <div class="grid grid-cols-2 gap-x-19 mt-[5.375rem]">
             <div class="flex flex-col justify-between">
@@ -108,21 +109,21 @@
 
 <script>
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   data() {
     return {
       digitalServicesList: [
         {
-          title: 'Technology Development',
-          desc: 'We provide website coding services from scratch. No templates, drag and drop, or even third party services.',
+          title: "Technology Development",
+          desc: "We provide website coding services from scratch. No templates, drag and drop, or even third party services.",
         },
         {
-          title: 'Graphic Design',
-          desc: 'As your brand is the most important investment you need in your business, we could help you build a consistent and strategic branding for it.',
+          title: "Graphic Design",
+          desc: "As your brand is the most important investment you need in your business, we could help you build a consistent and strategic branding for it.",
         },
         {
-          title: 'Social Media Management',
-          desc: 'Social media management is the curation of your brand’s social media activities to attract and engage audiences.',
+          title: "Social Media Management",
+          desc: "Social media management is the curation of your brand’s social media activities to attract and engage audiences.",
         },
       ],
     };
