@@ -36,7 +36,7 @@ export default {
   },
 
   // '@/assets/css/main.css'
-  css: [],
+  css: ["~/assets/main.css"],
 
   plugins: [],
 
