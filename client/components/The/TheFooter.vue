@@ -12,8 +12,12 @@
           >The Tall Tower 29th Floor, South Jakarta, Indonesia 14100</span
         >
         <div class="flex flex-col mb-10 gap-x-10 gap-y-1 sm:flex-row">
-          <span>hello@elanode.com</span>
-          <span>(+62) 812 1200 9988</span>
+          <a href="mailto:admin@elanode.com">
+            <span class="underline">admin@elanode.com</span>
+          </a>
+          <a href="https://wa.me/+6281287005020" target="_blank">
+            <span class="underline">(+62) 812 8700 5020</span>
+          </a>
         </div>
         <div
           class="mb-6 text-center grid gap-x-12 grid-cols-1 sm:grid-cols-2 md:flex md:flex-row"
@@ -51,7 +55,7 @@
         class="flex flex-col sm:flex-row gap-y-2 text-center justify-between items-center"
       >
         <span>© Elanode 2021 All Rights Reserved.</span>
-        <div class="flex items-center">
+        <!-- <div class="flex items-center">
           <span class="mr-5 sm:mr-9"> Follow Us </span>
           <a href="#">
             <IconFacebook class="mr-4" />
@@ -59,7 +63,7 @@
           <a href="#">
             <IconInstagram />
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -67,6 +71,6 @@
 
 <script>
 export default {
-  name: 'TheFooter',
+  name: "TheFooter",
 };
 </script>

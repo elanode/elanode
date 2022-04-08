@@ -11,14 +11,18 @@
       <div
         class="flex flex-col md:flex-row w-full items-center justify-center gap-x-12 gap-y-3"
       >
-        <div class="flex gap-x-5 items-center">
+        <a
+          href="https://wa.me/+6281287005020"
+          target="_blank"
+          class="flex items-center gap-x-5"
+        >
           <IconPhone />
-          <span class="font-bold text-xl">0812 1200 9988</span>
-        </div>
-        <div class="flex gap-x-5 items-center">
+          <span class="font-bold text-xl underline">+62-812-8700-5020</span>
+        </a>
+        <a href="mailto:admin@elanode.com" class="flex items-center gap-x-5">
           <IconEmail />
-          <span class="font-bold text-xl">hello@elanode.com</span>
-        </div>
+          <span class="font-bold text-xl underline">admin@elanode.com</span>
+        </a>
       </div>
     </section>
     <section class="container mb-14">
@@ -78,7 +82,7 @@
 // import { object, string } from 'yup';
 
 export default {
-  name: 'ContactUsPage',
+  name: "ContactUsPage",
   // components: {
   //   VForm: Form,
   //   VField: Field,
