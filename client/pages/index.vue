@@ -28,7 +28,7 @@
       </div>
     </section>
 
-    <section class="container mb-21">
+    <!-- <section class="container mb-21">
       <h2 class="header">
         A Creative Agency You <br class="hidden sm:block" />Can Trust
       </h2>
@@ -44,9 +44,9 @@
           consequat.
         </p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="container mb-21">
+    <!-- <section class="container mb-21">
       <h2 class="header mb-11">Elanode Expertise</h2>
       <div class="grid lg:grid-cols-3 gap-10 min-h-53">
         <HomeCard title="Reliable">
@@ -77,7 +77,7 @@
           </template>
         </HomeCard>
       </div>
-    </section>
+    </section> -->
 
     <section class="container mb-21">
       <h2 class="header lg:mb-16">
@@ -115,7 +115,7 @@ export default {
       digitalServicesList: [
         {
           title: "Technology Development",
-          desc: "We provide website coding services from scratch. No templates, drag and drop, or even third party services.",
+          desc: "We provide application development, website building, and others. We build with the latest technology and best practices in mind.",
         },
         {
           title: "Graphic Design",
@@ -123,7 +123,7 @@ export default {
         },
         {
           title: "Social Media Management",
-          desc: "Social media management is the curation of your brand’s social media activities to attract and engage audiences.",
+          desc: "Social media management is the curation of your brand's social media activities to attract and engage audiences.",
         },
       ],
     };

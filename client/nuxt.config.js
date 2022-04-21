@@ -73,7 +73,7 @@ export default {
   modules: [],
 
   router: {
-    linkExactActiveClass: "dark:bg-gray-700 bg-gray-100",
+    linkExactActiveClass: "dark:bg-gray-700 bg-gray-100 light:text-black",
   },
 
   build: {

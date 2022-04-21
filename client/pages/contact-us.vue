@@ -29,7 +29,7 @@
       <h2 class="header mb-3">Have a Project ?</h2>
       <div class="md:(grid grid-cols-6) items-start">
         <div class="col-span-2">
-          <p class="font-bold text-primary">We’d love to hear from you</p>
+          <p class="font-bold text-primary">We'd love to hear from you</p>
         </div>
         <p class="col-span-4 mt-5 md:mt-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
