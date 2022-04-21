@@ -9,7 +9,9 @@
           <span class="font-bold text-2xl">Elanode</span>
         </div>
         <span class="text-center mb-3"
-          >The Tall Tower 29th Floor, South Jakarta, Indonesia 14100</span
+          >Green Office Park 9, 2nd Floor <br />
+          Jl. Grand Boulevard, BSD Green Office Park, <br />Tangerang, Banten,
+          Indonesia, 15345</span
         >
         <div class="flex flex-col mb-10 gap-x-10 gap-y-1 sm:flex-row">
           <a href="mailto:admin@elanode.com">

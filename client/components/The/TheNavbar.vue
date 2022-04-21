@@ -1,7 +1,10 @@
 <template>
   <header class="container h-4rem flex flex-row items-center justify-between">
-    <NuxtLink to="/">
-      <img src="/logo.svg" alt="elanode logo" />
+    <NuxtLink v-if="!isDark" to="/" exact-active-class="">
+      <img src="/elanode-logo-blue.png" alt="elanode logo" width="100" />
+    </NuxtLink>
+    <NuxtLink v-else to="/" exact-active-class="">
+      <img src="/elanode-logo-white.png" alt="elanode logo" width="100" />
     </NuxtLink>
     <nav class="flex items-center text-sm justify-center gap-x-8">
       <NuxtLink
@@ -38,6 +41,11 @@ export default {
       checkbox: false,
       html: null,
     };
+  },
+  computed: {
+    isDark() {
+      return this.checkbox;
+    },
   },
   watch: {
     checkbox(val) {
